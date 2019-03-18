@@ -128,11 +128,11 @@ gulp.task('image:assets', function () {
 
 gulp.task('svg:assets', function () {
     gulp.src(path.src.svg)
-        /*.pipe(svgmin({
+        .pipe(svgmin({
             js2svg: {
                 pretty: false
             }
-        }))*/
+        }))
         .pipe(cheerio({
             run: function ($) {
                 $('[fill]').removeAttr('fill');
