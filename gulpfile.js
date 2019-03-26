@@ -67,7 +67,7 @@ gulp.task('css:assets', function () {
            browsers: ['last 2 version']
         }))
         // Сожмем
-        //.pipe(cssnano({zindex: false}))
+        .pipe(cssnano({zindex: false}))
         .pipe(sourcemaps.write())
         // Переместим в assets
         .pipe(gulp.dest(path.assets.css))
@@ -183,12 +183,7 @@ gulp.task('assets', [
 
 
 
-
 gulp.task('watch' , function() {
-    watch([path.watch.html], function(event, cb) {
-        gulp.start('html:assets');
-    });
-
     watch([path.watch.html], function(event, cb) {
         gulp.start('html:assets');
     });
@@ -197,6 +192,9 @@ gulp.task('watch' , function() {
     });
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:assets');
+    });
+    watch([path.watch.allimg], function(event, cb) {
+        gulp.start('allimg:assets');
     });
     watch([path.watch.img], function(event, cb) {
         gulp.start('image:assets');
@@ -218,7 +216,8 @@ gulp.task('browserSync',['css:assets','js:assets'], function () {
         server: {
             baseDir: path.assets
         },
-        //tunnel: true
+        notify: false
+       // tunnel: true
     });
 });
 
