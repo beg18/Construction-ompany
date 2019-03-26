@@ -67,7 +67,7 @@ gulp.task('css:assets', function () {
            browsers: ['last 2 version']
         }))
         // Сожмем
-        .pipe(cssnano({zindex: false}))
+        //.pipe(cssnano({zindex: false}))
         .pipe(sourcemaps.write())
         // Переместим в assets
         .pipe(gulp.dest(path.assets.css))
