@@ -1287,6 +1287,77 @@
   </section>
   <!-- End reviews -->
 
+  <section id="js_contacts"  class="contacts">
+      <div class="wrapper">
+           <header class="contacts__header">
+              <h2 class="contacts__title">
+                Контакты
+              </h2>
+          </header>
+          <article class="contacts__wrap">
+              <section class="contacts__location">
+                <ul class="location-list">
+                  <li class="location-item">
+                    <i class="fa fa-map-marker"></i>
+                    <strong>
+                      Адрес:
+                    </strong>
+                    Москва, ул. Пантелеева, 15, оф. 3-03
+                  </li>
+                  <li class="location-item">
+                    <i class="fa fa-mobile"></i>
+                    <strong>
+                      Телефон:
+                    </strong>
+                    8 (495) 970-44-90
+                  </li>
+                </ul>
+                <div class="location-map"></div>
+              </section>
+              <!-- End contacts__ilocation -->
+              <section class="contacts__form">
+                <form class="request-form">
+                
+                    <input class="request-input__hidden" type="hidden" name="admin-data" value="Заявка с внешней страницы">
+                
+                        <header class="request-form__head">
+                            <h4 class="request-form__title">Оставить заявку</h4>
+                            <p class="request-form__descr">Оставьте заявку и мы свяжемся с вами в течение 20 минут.</p>
+                        </header>
+                        <!--//request-form__head-->
+                        <label class="request-label">
+                            <span class="request-value">Ваше имя:</span>
+                            <input class="request-input" type="text" name="Имя" placeholder="Ваше имя...">
+                        </label>
+                        <!-- //request-label-->
+                        <label class="request-label">
+                            <span class="request-value">Ваш телефон:</span>
+                            <input class="request-input" type="text" name="Телефон" placeholder="Ваш телефон..." required>
+                        </label>
+                         <!--//request-label-->
+                        <label class="request-label">
+                            <span class="request-value">Услуга:</span>
+                            <select class="request-select" name="Услуга">
+                                <option class="request-option" value="Монтаж">Монтаж</option>
+                                <option class="request-option" value="Проектирование">Проектирование</option>
+                                <option class="request-option" value="Оборудование">Оборудование</option>
+                            </select>
+                        </label>
+                        <!--//request-label-->
+                        <footer class="request-form__footer">
+                            <button type="submit" class="request-btn but-accent-sm">Отправить</button>
+                        </footer>
+                        <!--//request-form__footer-->
+                </form>
+                <!--//request-form-->
+              </section>
+              <!-- End contacts__inner-2 -->
+          </article>
+      </div>
+      <!-- //wrapper -->
+  </section>
+  <!-- End contacts -->
+
 </main>
 <!-- End main -->
 
